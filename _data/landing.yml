@@ -1,0 +1,17 @@
+# index page sections
+# custom following lines to edit your index page
+- id: home
+  name: home
+  href: /
+
+- id: blog
+  name: 博客
+  href: /blog/android/
+
+- id: about-me
+  name: 关于我
+  href: /about/
+
+- id: tags
+  name: tags
+  href: /tags/

@@ -1,0 +1,43 @@
+<script src="{{'jPages.min.js' |prepend: site.js_folder | prepend: site.baseurl}}"></script>
+<script type="text/javascript">
+$(function(){
+  /* initiate the plugin */
+  $("div.pag_holder").jPages({
+      containerID  : "pag-itemContainer",
+      perPage      : 5,  /* num of items per page */
+      startPage    : 1,
+      startRange   : 1,
+      midRange     : 3,
+      endRange     : 1
+  });
+});
+</script>
+
+<div class="wrapper wrapper-content  animated fadeInRight blog">
+        <ul id="pag-itemContainer" style="list-style:none;">
+            {% assign counter = 0 %}
+            {% for post in site.categories[page.title] %}
+            {% assign counter = counter | plus: 1 %}
+            <li class="post-preview">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                            <h2 class="post-title">
+                                {{ post.title }}
+                            </h2>
+                            {% if post.subtitle %}
+                            <h3 class="post-subtitle">
+                                {{ post.subtitle }}
+                            </h3>
+                            {% endif %}
+                            <div class="post-content-preview">
+                                {{ post.content | strip_html | truncate:90 }}
+                            </div>
+                        </a>
+                        <p class="post-meta">
+                            Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y"
+                            }}
+                        </p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% include pagination.html %}
+</div>

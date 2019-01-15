@@ -1,0 +1,68 @@
+<!-- Footer -->
+<footer>
+    {%include search_footer.html%}
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- {%include links.html%} -->
+                <p class="copyright text-muted">
+                    Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by
+                    <span>Hux</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ 'bootstrap.min.js' | prepend: site.js_folder | prepend: site.baseurl }}"></script>
+<!--
+<script src="{{'custom-blog.min.js' |prepend: site.js_folder | prepend: site.baseurl}}"></script>
+-->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    /** only load tagcloud.js in tag.html*/
+    if ($('#tag_cloud').length !== 0) {
+        async("{{ 'jquery.tagcloud.js' | prepend: site.js_folder | prepend: site.baseurl}}", function () {
+            $.fn.tagcloud.defaults = {
+                color: { start: '#bbbbee', end: '#0085a1' },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("{{'fastclick.min.js' | prepend: site.js_folder | prepend: site.baseurl}}", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!--fancybox-->
+<script type="text/javascript" src="{{'fancybox/jquery.fancybox.pack.js?v=2.1.5' | prepend: site.js_folder | prepend: site.baseurl }}"></script>
+<script>
+    $(document).ready(function () {
+        $("p img").each(function () {
+            var strA = "<a id='yourid' href='" + this.src + "'></a>";
+            $(this).wrapAll(strA);
+        });
+    });
+    $("#yourid").fancybox({
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+    });
+</script>
+

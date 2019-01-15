@@ -1,0 +1,78 @@
+# Site settings
+title: Luoyu
+SEOTitle: 罗昱的博客 | Xiaowu Blog
+header-img: assets/img/home-bg.jpg
+email: luo_yu@126.com
+description: "此时相望不相闻，愿逐月华流照君| 罗昱的博客| BigData | sql | java"
+keyword: "Luoyu"
+# url: "https://xdsxhdyy.github.io"              # your host, for absolute URL
+url: "localhost:4000/"  #luoyu.site  8
+baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
+
+
+
+#default settings
+defaults:
+  -
+    socpe:
+      path: 
+      type: "posts"
+    values:
+      layout: post
+      author: "xiaowujiang"
+
+# SNS settings
+RSS: true
+github_username:  xiaowujiang
+csdn_username: xiaowu_zhu
+encoding : utf-8
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: /blog/:categories/:title.html
+exclude: ["node_modules","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 677cb870fafae889eec9ce2e03def624 
+
+sidebar-about-description: "Android Developer"
+sidebar-avatar: /assets/img/logo.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 3              # A tag will be featured if the size of it is more than this condition value
+
+#path
+js_folder: /assets/js/  
+img_folder: /assets/img/  
+css_folder: /assets/css/
+font_folder: /assets/fonts/
+img_path: /assets/img/blog/  
+
+# html压缩
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]

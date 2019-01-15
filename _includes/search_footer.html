@@ -1,0 +1,14 @@
+<div class="cb-search-tool">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 标签">
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="{{'/search/img/cb-close.png' | prepend: site.baseurl }}" id="cb-close-btn" />
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="{{'/search/img/cb-search.png' | prepend: site.baseurl }}" id="cb-search-btn" title="双击ctrl试一下" />
+</div>
+<script src="{{ '/search/js/bootstrap3-typeahead.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/search/js/cb-search.min.js '| prepend: site.baseurl }}"></script>
+<script src="{{ '/search/js/bootstrap-3.3.7/bootstrap.min.js' | prepend: site.baseurl }}"></script>

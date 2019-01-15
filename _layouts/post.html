@@ -1,0 +1,171 @@
+--- 
+layout: default
+---
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header {
+        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        {% for tag in page.tags %}
+                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                    <h1>{{ page.title }}</h1>
+                    {% comment %} always create a h2 for keeping the margin , Hux {% endcomment %} {% comment %} if page.subtitle {% endcomment
+                    %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% comment %} endif {% endcomment %}
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date
+                        | date: "%B %-d, %Y" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-9 col-lg-offset--2
+                col-md-10 col-md-offset-1
+                post-container">
+               <!-- 本文是 {{page.author | capitalize}} 原创，发表于
+                <a href="{{site.url}}{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a>，请阅读原文支持原创
+                <a href="{{site.url}}{{site.baseurl}}{{page.url}}">{{page.title}}</a> -->
+				
+                <hr> {{ content }}
+                <hr>
+            </div>
+            <!-- Side Catalog Container -->
+        {% if page.catalog %}
+        <div class="
+            col-lg-2 col-lg-offset-0
+            visible-lg-block
+            sidebar-container
+            catalog-container">
+            <div class="side-catalog">
+                <hr class="hidden-sm hidden-xs">
+                <h5>
+                    <a class="catalog-toggle" href="#">CATALOG</a>
+                </h5>
+                <ul class="catalog-body"></ul>
+            </div>
+        </div>
+    {% endif %}
+        </div>
+        
+        <div class="row">
+            <div class=" col-lg-9 col-lg-offset--2
+            col-md-10 col-md-offset-1">
+                <h5 style="display: inline;">Tags:</h5>
+                {% for tag in page.tags %}
+                <a class="btn btn-white btn-xs" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+    </div>
+</article>
+
+
+{% if site.anchorjs %}
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("{{'anchor.min.js' | prepend: site.js_folder | prepend: site.baseurl }}", function () {
+        anchors.options = {
+            visible: 'always',
+            placement: 'right',
+            icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+
+    @media all and (min-width: 800px) {
+        .anchorjs-link {
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top: -0.1em;
+        }
+    }
+</style>
+{% endif %}
+<!-- Side Catalog -->
+{% if page.catalog %}
+<script type="text/javascript">
+    function generateCatalog(selector) {
+        _containerSelector = 'div.post-container';
+
+        /** init*/
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        /** clean*/
+        $(selector).html('');
+
+        /**appending*/
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    /** toggle side catalog */
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold");
+    }));
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("{{ 'jquery.nav.js'| prepend: site.js_folder | prepend: site.baseurl }}", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script> {% endif %}

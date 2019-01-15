@@ -1,0 +1,21 @@
+# blog page sections
+- name: Home
+  href: /
+
+- name: BigData
+  href: /blog/android
+
+- name: JAVA WEB
+  href: /blog/java
+
+- name: 命令
+  href: /blog/cmd
+
+- name: NoSql
+  href: /blog/plugin
+
+- name: 前端
+  href: /blog/server
+
+- name: 数据库
+  href: /blog/sql
