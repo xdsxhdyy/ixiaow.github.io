@@ -1,8 +1,8 @@
 # Site settings
 title: Luoyu
-SEOTitle: 罗昱的博客 | Xiaowu Blog
-header-img: assets/img/home-bg.jpg
-email: luo_yu@126.com
+SEOTitle: 罗昱的博客 | Luoyu Blog
+header-img: assets/img/flowerl.jpg
+email: yu_luo@126.com
 description: "此时相望不相闻，愿逐月华流照君| 罗昱的博客| BigData | sql | java"
 keyword: "Luoyu"
 # url: "https://xdsxhdyy.github.io"              # your host, for absolute URL
@@ -19,12 +19,12 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: "xiaowujiang"
+      author: "luoyu"
 
 # SNS settings
 RSS: true
-github_username:  xiaowujiang
-csdn_username: xiaowu_zhu
+github_username:  xdsxhdyy
+csdn_username: xdsxhdyy
 encoding : utf-8
 
 # Build settings
@@ -51,8 +51,8 @@ kramdown:
 # Baidu Analytics
 ba_track_id: 677cb870fafae889eec9ce2e03def624 
 
-sidebar-about-description: "Android Developer"
-sidebar-avatar: /assets/img/logo.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Bigdata Developer"
+sidebar-avatar: /assets/img/nopal.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags

@@ -11,19 +11,19 @@ description: " My name's luoyu"
 
 # 简介
 
-我是Luoyu, 学历本科。立志成为一名牛逼的大数据开发工程师。
+我是Luoyu, 学历本科。从事数据科学领域的工作。
 
 个人主页：[iluoyu.site](https://iluoyu.site)
 
-CSDN博客：[xiaowujiang.cn/csdn/](https://xiaowujiang.cn/csdn/)
+CSDN博客：[luoyu.cn/csdn/](https://blog.csdn.net/XDSXHDYY)
 
-Github：[github.com/ixiaow](https://github.com/ixiaow)
+Github：[github.com/iluoyu](https://github.com/xdsxhdyy)
 
 个人邮箱：
 
-* [xiaowu_zhu@126.com](mailto: xiaowu_zhu@126.com) 
+* [yu_luo@126.com](mailto: yu_luo@126.com) 
 
-* [i.xiaowujiang@gmail.com](mailto: i.xiaowujiang@gmail.com)
+* [1025834296@qq.com](mailto: 1025834296@qq.com)
 
 
 
