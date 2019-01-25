@@ -8,7 +8,7 @@ categories: [Sql]
 tags: [sql, mysql, timestamp]
 ---
 
-#mysql时间戳timestamp和utf8mb4字符集
+# mysql时间戳timestamp和utf8mb4字符集
 
 ##1.timestamp时间戳
 

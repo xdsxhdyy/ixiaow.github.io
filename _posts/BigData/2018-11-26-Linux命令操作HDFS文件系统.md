@@ -4,7 +4,7 @@ title:  "Linux命令操作HDFS文件系统"
 date:   2018-11-26
 desc: "Linux命令操作HDFS文件系统"
 keywords: "BigData,HDFS"
-categories: [big]
+categories: [bigdata]
 tags: [BigData, HDFS]
 ---
 
