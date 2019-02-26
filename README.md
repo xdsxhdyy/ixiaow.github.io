@@ -1,6 +1,4 @@
-# Xiaowu 's Blog
 
-## [Xiaowu's blog](https://ixiaow.github.io)
 
 本blog，使用的是[Promg.io](https://github.com/promeg/promeg.github.io) 的模板修改而成，相比之前不同之处在于：
 
@@ -14,7 +12,8 @@
 
 6. 添加了全局搜索插件
 
-7. 添加了图片查看控件 [Fancy](https://xiaowujiang.cn/plugin/%E4%BD%BF%E7%94%A8FancyBox%E6%9D%A5%E7%82%B9%E5%87%BB%E6%9F%A5%E7%9C%8B%E5%A4%A7%E5%9B%BE)
+7. 添加了图片查看控件
+
 8. 其他的一些细节优化 
 
 ## 欢迎大家fork
